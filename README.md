@@ -1,6 +1,6 @@
 # Card Combiner
 
-A Python script that combines front and back images of cards into a single side-by-side image.
+A Python script that combines front and back images of cards into a single side-by-side image. This is ideal for placing images on Cardmarket, which limits you to one picture file per listed card.
 
 ## Installation
 
