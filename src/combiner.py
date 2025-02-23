@@ -38,8 +38,29 @@ def correct_image_orientation(image):
     return image
 
 def move_images(output_filename, pair):
+    """
+    Move processed images to their respective directories.
+    
+    Creates 'processed-source' and 'processed-combined' directories if they don't exist.
+    Moves the front and back source images to 'processed-source',
+    and the combined image to 'processed-combined'.
+    
+    Args:
+        output_filename (str): Name of the combined image file
+        pair (dict): Dictionary containing 'front' and 'back' image filenames
+    
+    Returns:
+        None
+    """
+    # Create directories if they don't exist
+    os.makedirs('processed-source', exist_ok=True)
+    os.makedirs('processed-combined', exist_ok=True)
+    
+    # Move source images
     os.rename(pair['front'], os.path.join('processed-source', pair['front']))
     os.rename(pair['back'], os.path.join('processed-source', pair['back']))
+    
+    # Move combined image
     os.rename(output_filename, os.path.join('processed-combined', output_filename))
     
 
