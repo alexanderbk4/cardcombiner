@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Images
+*.jpg
+*.jpeg
+*.png
+
+# Keep example images
+!WP4 Pikachu F.jpg
+!WP4 Pikachu B.jpg
+
+# OS specific
+.DS_Store
